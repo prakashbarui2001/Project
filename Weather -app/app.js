@@ -42,7 +42,7 @@ form.addEventListener(
     function(event){
       // console.log(search.value);
       getweather(search.value);
-        event.preventDefault(); // preventDefault() stops its reloade
+        event.preventDefault(); 
     }
 
     
