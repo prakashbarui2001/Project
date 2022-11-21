@@ -34,9 +34,20 @@ document.querySelector(".check").addEventListener("click", function () {
       document.querySelector(".highscore").textContent = highscore;
     }
   }
-
-  // when high input
+   // when guess number and snumber nit be equal then refectoring the code
   else if (guess != snumber) {
+    if (score > 1) {
+      document.querySelector(".message").textContent =
+        guess > snumber ? "😉 Thats is Too High !" : "😏 Thats is Too Low !";
+      score--;
+      document.querySelector(".score").textContent = score;
+    } else {
+      document.querySelector(".message").textContent = "😥 You lost the game !";
+      document.querySelector(".score").textContent = 0;
+    }
+  }
+  // when high input
+  /*else if (guess != snumber) {
     if (guess > snumber) {
       if (score > 1) {
         document.querySelector(".message").textContent =
@@ -61,6 +72,7 @@ document.querySelector(".check").addEventListener("click", function () {
       }
     }
   }
+  */
   // when low input
 });
 
